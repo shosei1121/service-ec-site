@@ -1,16 +1,9 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { products } from "../data/products";
 import "./Home.css";
 
 function Home() {
-  const [featured, setFeatured] = useState([]);
-
-  useEffect(() => {
-    fetch("/api/products")
-      .then((r) => r.json())
-      .then((data) => setFeatured(data.slice(0, 3)))
-      .catch(() => {});
-  }, []);
+  const featured = products.slice(0, 3);
 
   return (
     <div className="home">

@@ -1,23 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { products, categories } from "../data/products";
 import ProductCard from "../components/ProductCard";
 import "./Products.css";
 
 function Products({ addToCart }) {
-  const [products, setProducts] = useState([]);
-  const [categories, setCategories] = useState([]);
   const [activeCategory, setActiveCategory] = useState("すべて");
   const [addedId, setAddedId] = useState(null);
-
-  useEffect(() => {
-    fetch("/api/products")
-      .then((r) => r.json())
-      .then(setProducts)
-      .catch(() => {});
-    fetch("/api/categories")
-      .then((r) => r.json())
-      .then(setCategories)
-      .catch(() => {});
-  }, []);
 
   const filtered =
     activeCategory === "すべて"

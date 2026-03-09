@@ -1,23 +1,21 @@
 import { useParams, Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { products } from "../data/products";
 import "./ProductDetail.css";
 
 function ProductDetail({ addToCart }) {
   const { id } = useParams();
-  const [product, setProduct] = useState(null);
   const [added, setAdded] = useState(false);
 
-  useEffect(() => {
-    fetch(`/api/products/${id}`)
-      .then((r) => r.json())
-      .then(setProduct)
-      .catch(() => {});
-  }, [id]);
+  const product = products.find((p) => p.id === id);
 
   if (!product) {
     return (
       <div className="container" style={{ padding: "100px 0", textAlign: "center" }}>
-        <p className="text-muted">読み込み中...</p>
+        <h2>サービスが見つかりません</h2>
+        <Link to="/products" className="btn btn-primary" style={{ marginTop: 16 }}>
+          サービス一覧に戻る
+        </Link>
       </div>
     );
   }
