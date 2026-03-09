@@ -1,0 +1,142 @@
+.breadcrumb {
+  padding: 24px 0;
+}
+
+.breadcrumb a {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.breadcrumb a:hover {
+  color: var(--accent);
+}
+
+.detail-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 48px;
+  padding-bottom: 80px;
+}
+
+.detail-header {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.detail-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.detail-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+.detail-name-ja {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-top: 4px;
+}
+
+.detail-description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.detail-features h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.detail-features ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.feature-check {
+  color: var(--success);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Pricing sidebar */
+.pricing-card {
+  position: sticky;
+  top: 88px;
+}
+
+.pricing-header {
+  margin-bottom: 24px;
+}
+
+.pricing-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.pricing-amount {
+  display: flex;
+  align-items: baseline;
+}
+
+.pricing-features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.pricing-feature {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.btn-full {
+  width: 100%;
+  justify-content: center;
+}
+
+.btn-added {
+  background: var(--success);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .detail-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .detail-header {
+    flex-direction: column;
+  }
+  .detail-title {
+    font-size: 1.6rem;
+  }
+}

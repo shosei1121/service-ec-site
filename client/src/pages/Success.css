@@ -1,0 +1,44 @@
+.success-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 60px 0;
+}
+
+.success-card {
+  text-align: center;
+  max-width: 560px;
+  padding: 48px;
+}
+
+.success-check {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.success-card h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.success-card > p {
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.success-detail {
+  color: var(--text-muted) !important;
+  font-size: 0.9rem;
+  margin-top: 16px;
+  margin-bottom: 32px !important;
+  line-height: 1.7;
+}
+
+.success-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
