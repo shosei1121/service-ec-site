@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./Cart.css";
 
+const BASE = import.meta.env.BASE_URL;
+
 function Cart({ cart, removeFromCart, updateQuantity }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -30,7 +32,7 @@ function Cart({ cart, removeFromCart, updateQuantity }) {
         setError(data.error || "決済セッションの作成に失敗しました");
       }
     } catch (err) {
-      setError("サーバーに接続できません。Stripeの設定を確認してください。");
+      setError("Stripe決済はバックエンドサーバーが必要です。デモ版ではご利用いただけません。");
     } finally {
       setLoading(false);
     }
@@ -62,8 +64,8 @@ function Cart({ cart, removeFromCart, updateQuantity }) {
         <div className="cart-items">
           {cart.map((item) => (
             <div key={item.id} className="cart-item card">
-              <div className="cart-item-icon" style={{ background: `${item.color}20` }}>
-                <span>{item.icon}</span>
+              <div className="cart-item-icon" style={{ background: `${item.color}15` }}>
+                <img src={`${BASE}${item.icon}`} alt={item.nameJa} />
               </div>
               <div className="cart-item-info">
                 <h3>{item.name}</h3>

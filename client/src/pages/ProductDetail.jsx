@@ -3,6 +3,8 @@ import { useState } from "react";
 import { products } from "../data/products";
 import "./ProductDetail.css";
 
+const BASE = import.meta.env.BASE_URL;
+
 function ProductDetail({ addToCart }) {
   const { id } = useParams();
   const [added, setAdded] = useState(false);
@@ -37,8 +39,8 @@ function ProductDetail({ addToCart }) {
       <div className="detail-layout">
         <div className="detail-main">
           <div className="detail-header">
-            <div className="detail-icon" style={{ background: `${product.color}20` }}>
-              <span>{product.icon}</span>
+            <div className="detail-icon" style={{ background: `${product.color}15` }}>
+              <img src={`${BASE}${product.icon}`} alt={product.nameJa} />
             </div>
             <div>
               <span className="badge">{product.category}</span>

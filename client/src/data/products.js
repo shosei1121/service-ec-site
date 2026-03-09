@@ -13,7 +13,7 @@ export const products = [
     ],
     price: 29800,
     category: "インフラ",
-    icon: "☁️",
+    icon: "icons/cloud-mgmt.png",
     color: "#3b82f6"
   },
   {
@@ -30,7 +30,7 @@ export const products = [
     ],
     price: 49800,
     category: "AI・データ",
-    icon: "🧠",
+    icon: "icons/ai-analytics.png",
     color: "#8b5cf6"
   },
   {
@@ -47,7 +47,7 @@ export const products = [
     ],
     price: 59800,
     category: "セキュリティ",
-    icon: "🛡️",
+    icon: "icons/security-monitor.png",
     color: "#ef4444"
   },
   {
@@ -64,7 +64,7 @@ export const products = [
     ],
     price: 34800,
     category: "開発ツール",
-    icon: "🔗",
+    icon: "icons/api-gateway.png",
     color: "#06b6d4"
   },
   {
@@ -81,7 +81,7 @@ export const products = [
     ],
     price: 24800,
     category: "開発ツール",
-    icon: "⚡",
+    icon: "icons/db-optimizer.png",
     color: "#f59e0b"
   },
   {
@@ -98,7 +98,7 @@ export const products = [
     ],
     price: 39800,
     category: "開発ツール",
-    icon: "📱",
+    icon: "icons/mobile-devkit.png",
     color: "#10b981"
   },
   {
@@ -115,7 +115,7 @@ export const products = [
     ],
     price: 19800,
     category: "DevOps",
-    icon: "🚀",
+    icon: "icons/cicd-manager.png",
     color: "#6366f1"
   },
   {
@@ -132,7 +132,7 @@ export const products = [
     ],
     price: 14800,
     category: "コラボレーション",
-    icon: "👥",
+    icon: "icons/team-dashboard.png",
     color: "#ec4899"
   },
   {
@@ -149,7 +149,7 @@ export const products = [
     ],
     price: 44800,
     category: "AI・データ",
-    icon: "🤖",
+    icon: "icons/support-ai.png",
     color: "#14b8a6"
   },
   {
@@ -166,7 +166,7 @@ export const products = [
     ],
     price: 12800,
     category: "開発ツール",
-    icon: "📄",
+    icon: "icons/doc-generator.png",
     color: "#a855f7"
   },
   {
@@ -183,7 +183,7 @@ export const products = [
     ],
     price: 54800,
     category: "インフラ",
-    icon: "📡",
+    icon: "icons/iot-management.png",
     color: "#f97316"
   },
   {
@@ -200,7 +200,7 @@ export const products = [
     ],
     price: 64800,
     category: "セキュリティ",
-    icon: "🔐",
+    icon: "icons/blockchain-auth.png",
     color: "#84cc16"
   },
   {
@@ -217,7 +217,7 @@ export const products = [
     ],
     price: 32800,
     category: "DevOps",
-    icon: "📊",
+    icon: "icons/perf-monitor.png",
     color: "#0ea5e9"
   }
 ];

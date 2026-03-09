@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import "./ProductCard.css";
 
+const BASE = import.meta.env.BASE_URL;
+
 function ProductCard({ product, addToCart }) {
   const formatPrice = (price) => {
     return new Intl.NumberFormat("ja-JP").format(price);
@@ -9,8 +11,8 @@ function ProductCard({ product, addToCart }) {
   return (
     <div className="product-card card">
       <div className="product-card-header">
-        <div className="product-icon" style={{ background: `${product.color}20` }}>
-          <span>{product.icon}</span>
+        <div className="product-icon" style={{ background: `${product.color}15` }}>
+          <img src={`${BASE}${product.icon}`} alt={product.nameJa} />
         </div>
         <span className="badge">{product.category}</span>
       </div>

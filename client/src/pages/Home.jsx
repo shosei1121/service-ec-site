@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { products } from "../data/products";
 import "./Home.css";
 
+const BASE = import.meta.env.BASE_URL;
+
 function Home() {
   const featured = products.slice(0, 3);
 
@@ -60,8 +62,8 @@ function Home() {
           <div className="featured-grid">
             {featured.map((p) => (
               <Link to={`/products/${p.id}`} key={p.id} className="featured-card card">
-                <div className="featured-icon" style={{ background: `${p.color}20` }}>
-                  <span>{p.icon}</span>
+                <div className="featured-icon" style={{ background: `${p.color}15` }}>
+                  <img src={`${BASE}${p.icon}`} alt={p.nameJa} />
                 </div>
                 <h3>{p.name}</h3>
                 <p className="featured-name-ja">{p.nameJa}</p>
